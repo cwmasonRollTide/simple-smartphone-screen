@@ -4,14 +4,16 @@ import "./SimpleSmartphoneComponent.css";
 import MessageDisplay from "./MessageDisplay";
 
 const SimpleSmartphoneComponent = ({messages, mainImageUrl}) => {
-  return <div className="smartphone">
+  return (
+    <div className="smartphone">
       <div className="smartphone-container">
         <div className="main-image-container">
           <img src={mainImageUrl} className="main-image" alt={'/logo512.png'}/>
         </div>
         <MessageDisplay messages={messages} />
       </div>
-    </div>;
+    </div>
+  );
 }
 
 SimpleSmartphoneComponent.propTypes = {
