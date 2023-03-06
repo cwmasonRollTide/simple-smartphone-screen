@@ -13,10 +13,10 @@ import SimpleSmartphoneComponent from 'simple-smartphone-screen';
 
 const Component = () => {
     const exampleMessages = [{
-        messageBody: 'This is a message body - it is required',
         image: 'This is an image link - it is optional',
+        messageBody: 'This is a message body - it is required',
     },{
-		messageBody: 'This is a message without an image'	
+      messageBody: 'This is a message without an image'	
     }];
     return (
         <SimpleSmartphoneComponent
