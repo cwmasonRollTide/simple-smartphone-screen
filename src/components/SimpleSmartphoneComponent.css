@@ -1,16 +1,18 @@
 .smartphone {
   display: flex;
-  flexWrap: wrap;
-  alignItems: end;
-  borderRadius: 0.5em;
-  flexDirection: column;
-  backgroundColor: black;
+  flex-wrap: wrap;
+  align-items: end;
+  border-radius: 0.5em;
+  flex-direction: column;
+  background-color: black;
 }
 
 .main-image-container {
   border-radius: 3em;
   align-items: center;
   align-content: center;
+  height: 1em;
+  width: 1em;
 }
 
 .main-image {
