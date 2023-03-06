@@ -1,9 +1,13 @@
 {
   "name": "simple-smartphone-screen",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Simple lightweight ReactJS component to mimic a common smartphone screen for anyone :)",
   "main": "/src/components",
-  "keywords": ["ui", "component", "phone"],
+  "keywords": [
+    "ui",
+    "component",
+    "phone"
+  ],
   "author": {
     "name": "Connor Mason",
     "email": "connorwmason25@gmail.com"
@@ -38,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-syntax-jsx": "^7.18.6"
   }
 }
