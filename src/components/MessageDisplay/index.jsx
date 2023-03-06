@@ -3,7 +3,7 @@ import './MessageDisplay.css';
 import TextPost from "../TextPost";
 import ImagePost from "../ImagePost";
 
-const MessageDisplay = ({messages}) => {
+export default function MessageDisplay({messages}) {
   return (
     <div className="smartphone-conversation">
       {messages.map((message, index) => {
@@ -15,6 +15,4 @@ const MessageDisplay = ({messages}) => {
       })}
     </div>
   );
-};
-
-export default MessageDisplay;
+}

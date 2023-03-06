@@ -1,9 +1,6 @@
 # Simple Smartphone Screen
 I didn't like any options available for a lightweight ReactJS component to look like a smartphone
-
-Will have examples once available on npm but basically I want you to be able to interact
-with the phone as well. Be able to pass in a callback so you can do what you
-want with whatever a user types in your phone screen
+Plan is to make it have optional callbacks dropped in for user input - easy component to use for chat bot apps
 
 ### Goal is to be able to import SimpleSmartphoneComponent, pass in a function to handle user input, an
 ### image link for the circle on the center of the top of the smartphone chat, and messages from sender and
