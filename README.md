@@ -1,34 +1,28 @@
 # Simple Smartphone Screen
-## I didn't like any options available for a lightweight ReactJS component to look like a smartphone
+I didn't like any options available for a lightweight ReactJS component to look like a smartphone
 
-## Will have examples once available on npm but basically I want you to be able to interact
-## with the phone as well. Be able to pass in a callback so you can do what you
-## want with whatever a user types in your phone screen
+Will have examples once available on npm but basically I want you to be able to interact
+with the phone as well. Be able to pass in a callback so you can do what you
+want with whatever a user types in your phone screen
 
+### Goal is to be able to import SimpleSmartphoneComponent, pass in a function to handle user input, an
+### image link for the circle on the center of the top of the smartphone chat, and messages from sender and
+### receiver to be displayed
+```javascript
+import SimpleSmartphoneComponent from 'simple-smartphone-screen';
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+const Component = () => {
+    const exampleMessages = [{
+        messageBody: 'This is a message body - it is required',
+        image: 'This is an image link - it is optional',
+    },{
+		messageBody: 'This is a message without an image'	
+    }];
+    return (
+        <SimpleSmartphoneComponent
+            messages={exampleMessages}
+            mainImageUrl={"https://www.beautifulperson.com"} 
+        />
+    );
+};
+```
