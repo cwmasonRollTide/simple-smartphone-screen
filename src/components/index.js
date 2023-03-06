@@ -8,7 +8,7 @@ const SimpleSmartphoneComponent = (messages, mainImageUrl) => {
     <div className="component">
       <div className="smartphone-container">
         <div className="main-image-container">
-          <img src={mainImageUrl} className="main-image"/>
+          <img src={mainImageUrl} className="main-image" alt={'/logo512.png'}/>
         </div>
         <MessageDisplay messages={messages} />
       </div>
