@@ -1,0 +1,8 @@
+.App {
+  display: flex;
+  flexWrap: wrap;
+  alignItems: end;
+  borderRadius: 0.5em;
+  flexDirection: column;
+  backgroundColor: black;
+}
