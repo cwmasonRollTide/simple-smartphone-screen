@@ -1,0 +1,17 @@
+.smartphone-container {
+  display: flex;
+  padding: 10px;
+  height: 39rem;
+  flex-direction: column;
+}
+
+.smartphone-bubble {
+  color: white;
+  padding: 0.5em;
+  min-width: 80%;
+  font-size: large;
+  margin-bottom: 10px;
+  border-radius: 0.5em;
+  background-color: dodgerblue;
+  font-family: "Microsoft Sans Serif", sans-serif;
+}

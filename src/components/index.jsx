@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "./SimpleSmartphoneComponent.css";
 import MessageDisplay from "./MessageDisplay";
 
-export default function SimpleSmartphoneComponent({messages, mainImageUrl}) {
+function SimpleSmartphoneComponent({messages, mainImageUrl}) {
   return (
     <div className="smartphone">
       <div className="smartphone-container">
@@ -23,4 +23,6 @@ SimpleSmartphoneComponent.propTypes = {
     messageBody: PropTypes.string.isRequired
   })
 };
+
+export { SimpleSmartphoneComponent };
 
