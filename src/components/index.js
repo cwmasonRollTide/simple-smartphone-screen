@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from "prop-types";
 import "./SimpleSmartphoneComponent.css";
 import MessageDisplay from "./MessageDisplay";
+
 const SimpleSmartphoneComponent = ({messages, mainImageUrl}) => {
-  return
-    <div className="smartphone">
+  return <div className="smartphone">
       <div className="smartphone-container">
         <div className="main-image-container">
           <img src={mainImageUrl} className="main-image" alt={'/logo512.png'}/>
@@ -13,12 +13,14 @@ const SimpleSmartphoneComponent = ({messages, mainImageUrl}) => {
       </div>
     </div>;
 }
+
 SimpleSmartphoneComponent.propTypes = {
+  mainImageUrl: PropTypes.string,
   messages: PropTypes.arrayOf({
     image: PropTypes.string,
     messageBody: PropTypes.string.isRequired
-  }),
-  mainImageUrl: PropTypes.string
+  })
 };
+
 export default SimpleSmartphoneComponent;
 
