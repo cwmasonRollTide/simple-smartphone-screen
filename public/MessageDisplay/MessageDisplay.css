@@ -1,7 +1,8 @@
-.message-image {
-  height: 0.5em;
-  width: 0.5em;
-  margin-bottom: 0.5em;
+.smartphone-container {
+  display: flex;
+  padding: 10px;
+  height: 39rem;
+  flex-direction: column;
 }
 
 .smartphone-bubble {

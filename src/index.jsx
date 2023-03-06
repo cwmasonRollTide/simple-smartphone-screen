@@ -1,8 +1,10 @@
 import React from 'react';
 import App from "./App";
 import ReactDOM from 'react-dom/client';
+import SimpleSmartphoneComponent from "./components";
 
 const myFirstElement = <App />;
+export default SimpleSmartphoneComponent;
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(myFirstElement);
+ReactDOM.render(myFirstElement, document.getElementById('HTML')[0]);
+

@@ -1,7 +1,7 @@
 import React from 'react';
 import SimpleSmartphoneComponent from "../components";
 
-const Example = () => {
+export default function Example() {
 	const exampleMessages = [{
 		messageBody: 'This is a message body - it is required',
 		image: 'This is an image link - it is optional',
@@ -15,5 +15,3 @@ const Example = () => {
 		/>
 	);
 }
-
-export default Example;
