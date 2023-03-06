@@ -1,8 +1,18 @@
-.App {
+.component {
   display: flex;
   flexWrap: wrap;
   alignItems: end;
   borderRadius: 0.5em;
   flexDirection: column;
   backgroundColor: black;
+}
+
+.main-image-container {
+  align-items: center;
+  align-content: center;
+  border-radius: 3em;
+}
+
+.main-image {
+
 }
