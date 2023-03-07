@@ -1,5 +1,5 @@
 import React from "react";
-import SimpleSmartphoneComponent from "../components";
+import SimpleSmartphoneComponent from "../components/index";
 import { useTheme, ThemeProvider } from '@mui/material/styles';
 
 export default function Example() {

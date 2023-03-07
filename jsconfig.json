@@ -13,11 +13,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "js": "react",
+    "jsx": "react",
     "moduleResolution": "node"
   },
   "include": [
-    "**/*.js",
-    "**/*.jsx"
+    "**/*.js"
   ],
   "exclude": [
     "node_modules"
