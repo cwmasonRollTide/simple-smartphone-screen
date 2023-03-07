@@ -1,20 +1,26 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import {Container, Grid} from "@mui/material";
 import MessageDisplay from "./MessageDisplay";
 import styles from "./SimpleSmartphoneComponent.module.css";
 
 export default function SimpleSmartphoneComponent({messages, mainImageUrl}) {
+  const exampleMessages = [{
+    messageBody: "This is a message body - it is required"
+  },{
+    messageBody: "This is a message without an image"
+  }];
   return (
-    <div className={styles.smartphone}>
-      <div className={styles.smartphoneContainer}>
+    <Container className={styles.smartphone}>
+      <Grid container className={styles.smartphoneContainer}>
         {mainImageUrl && (
-          <div className={styles.mainImageContainer}>
+          <Grid item xs={12} className={styles.mainImageContainer}>
             <img src={mainImageUrl} className={styles.mainImage} alt={'/logo512.png'}/>
-          </div>
+          </Grid>
         )}
-        <MessageDisplay messages={messages} />
-      </div>
-    </div>
+        <MessageDisplay messages={exampleMessages ?? messages} />
+      </Grid>
+    </Container>
   );
 }
 

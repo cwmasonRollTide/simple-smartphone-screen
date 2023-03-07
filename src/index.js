@@ -1,7 +1,9 @@
 import React from 'react';
-import Example from "./pages";
+import Example from "./examples";
 import ReactDOM from 'react-dom/client';
 
-const myFirstElement = <Example />;
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(myFirstElement);
+root.render(<ReactDOM.StrictMode>
+	<Example />
+</ReactDOM.StrictMode>
+);

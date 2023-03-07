@@ -1,4 +1,5 @@
 .smartphone {
+  height: 39em;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
@@ -15,8 +16,6 @@
   border-radius: 3em;
   align-items: center;
   align-content: center;
-  height: 1em;
-  width: 1em;
 }
 
 .main-image {
