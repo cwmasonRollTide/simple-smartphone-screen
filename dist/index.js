@@ -6,21 +6,21 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = SimpleSmartphoneComponent;
 var _react = _interopRequireDefault(require("react"));
 var _propTypes = _interopRequireDefault(require("prop-types"));
-require("./SimpleSmartphoneComponent.css");
 var _MessageDisplay = _interopRequireDefault(require("./MessageDisplay"));
+var _SimpleSmartphoneComponent = _interopRequireDefault(require("./SimpleSmartphoneComponent.css"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function SimpleSmartphoneComponent(_ref) {
   var messages = _ref.messages,
     mainImageUrl = _ref.mainImageUrl;
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: "smartphone"
+    className: _SimpleSmartphoneComponent.default.smartphone
   }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "smartphone-container"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "main-image-container"
+    className: _SimpleSmartphoneComponent.default.smartphoneContainer
+  }, mainImageUrl && /*#__PURE__*/_react.default.createElement("div", {
+    className: _SimpleSmartphoneComponent.default.mainImageContainer
   }, /*#__PURE__*/_react.default.createElement("img", {
     src: mainImageUrl,
-    className: "main-image",
+    className: _SimpleSmartphoneComponent.default.mainImage,
     alt: '/logo512.png'
   })), /*#__PURE__*/_react.default.createElement(_MessageDisplay.default, {
     messages: messages

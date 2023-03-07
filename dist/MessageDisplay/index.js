@@ -5,14 +5,14 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = MessageDisplay;
 var _react = _interopRequireDefault(require("react"));
-require("./MessageDisplay.css");
 var _TextPost = _interopRequireDefault(require("../TextPost"));
 var _ImagePost = _interopRequireDefault(require("../ImagePost"));
+var _MessageDisplay = _interopRequireDefault(require("./MessageDisplay.css"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function MessageDisplay(_ref) {
   var messages = _ref.messages;
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: "smartphone-conversation"
+    className: _MessageDisplay.default.smartphoneConversation
   }, messages.map(function (message, index) {
     if (!message.image) {
       return /*#__PURE__*/_react.default.createElement(_TextPost.default, {
