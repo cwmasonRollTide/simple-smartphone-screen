@@ -1,14 +1,14 @@
 .smartphone {
   display: flex;
   flex-wrap: wrap;
-  align-items: end;
+  align-items: flex-end;
   border-radius: 0.5em;
   flex-direction: column;
   background-color: black;
 }
 
 .smartphone-container {
-  
+  align-content: flex-end;
 }
 
 .main-image-container {

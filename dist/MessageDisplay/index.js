@@ -7,12 +7,12 @@ exports.default = MessageDisplay;
 var _react = _interopRequireDefault(require("react"));
 var _TextPost = _interopRequireDefault(require("../TextPost"));
 var _ImagePost = _interopRequireDefault(require("../ImagePost"));
-var _MessageDisplay = _interopRequireDefault(require("./MessageDisplay.css"));
+var _MessageDisplayModule = _interopRequireDefault(require("./MessageDisplay.module.css"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function MessageDisplay(_ref) {
   var messages = _ref.messages;
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: _MessageDisplay.default.smartphoneConversation
+    className: _MessageDisplayModule.default.smartphoneConversation
   }, messages.map(function (message, index) {
     if (!message.image) {
       return /*#__PURE__*/_react.default.createElement(_TextPost.default, {

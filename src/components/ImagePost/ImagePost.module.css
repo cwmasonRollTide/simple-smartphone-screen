@@ -1,10 +1,10 @@
-.message-image {
+.message-image-on-image-post {
   height: 5px;
   width: 5px;
   border-radius: 1em;
 }
 
-.smartphone-bubble {
+.smartphone-bubble-on-image-post {
   color: white;
   padding: 0.5em;
   min-width: 80%;

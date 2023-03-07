@@ -7,5 +7,9 @@ export default function Example() {
 	},{
 		messageBody: 'This is a message without an image'
 	}];
-	return <SimpleSmartphoneComponent messages={exampleMessages} />;
+	return (
+		<React.Fragment>
+			<SimpleSmartphoneComponent messages={exampleMessages} />
+		</React.Fragment>
+	);
 }

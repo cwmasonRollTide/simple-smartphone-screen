@@ -7,8 +7,8 @@
   "files": ["dist", "README.md" ],
   "keywords": [
     "ui",
-    "component",
-    "phone"
+    "phone",
+    "component"
   ],
   "author": {
     "name": "Connor Mason",
