@@ -1,3 +1,4 @@
+import "./ImagePost.css";
 import React from 'react';
 
 export default function ImagePost({index, messageBody, mediaUrl}) {

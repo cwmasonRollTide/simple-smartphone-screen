@@ -1,4 +1,5 @@
-import React from 'react';
+import "./TextPost.css";
+import React from  "react";
 
 export default function TextPost ({index, message}) {
   return (

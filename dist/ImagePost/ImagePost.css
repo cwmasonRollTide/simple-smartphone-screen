@@ -1,5 +1,7 @@
 .message-image {
-  margin-bottom: 0.5em;
+  height: 5px;
+  width: 5px;
+  border-radius: 1em;
 }
 
 .smartphone-bubble {
