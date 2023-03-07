@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import MessageDisplay from "./MessageDisplay";
 import styles from "./SimpleSmartphoneComponent.module.css";
 
-export default function SimpleSmartphoneComponent(messages, mainImageUrl) {
+export default function SimpleSmartphoneComponent({messages, mainImageUrl}) {
   return (
     <div className={styles.smartphone}>
       <div className={styles.smartphoneContainer}>
