@@ -16,24 +16,23 @@ function SimpleSmartphoneComponent(_ref) {
   return /*#__PURE__*/_react.default.createElement(_material.Container, {
     className: _SimpleSmartphoneComponentModule.default.smartphone
   }, /*#__PURE__*/_react.default.createElement(_material.Grid, {
-    container: true,
-    className: _SimpleSmartphoneComponentModule.default.smartphoneContainer
+    container: true
   }, mainImageUrl && /*#__PURE__*/_react.default.createElement(_material.Grid, {
     item: true,
     xs: 12,
-    className: _SimpleSmartphoneComponentModule.default.mainImageContainer
-  }, /*#__PURE__*/_react.default.createElement("img", {
+    className: _SimpleSmartphoneComponentModule.default.message
+  }, /*#__PURE__*/_react.default.createElement(_material.Box, {
+    component: "img",
     src: mainImageUrl,
-    className: _SimpleSmartphoneComponentModule.default.mainImage,
-    alt: '/logo512.png'
+    alt: 'Person'
   })), /*#__PURE__*/_react.default.createElement(_MessageDisplay.default, {
     messages: messages
   })));
 }
 SimpleSmartphoneComponent.propTypes = {
   mainImageUrl: _propTypes.default.string,
-  messages: _propTypes.default.arrayOf({
+  messages: _propTypes.default.arrayOf(_propTypes.default.shape({
     image: _propTypes.default.string,
-    messageBody: _propTypes.default.string.isRequired
-  })
+    messageBody: _propTypes.default.string
+  }))
 };

@@ -1,15 +1,15 @@
 import React from "react";
 import TextPost from "../TextPost";
 // import ImagePost from "../ImagePost";
+import {Box, Container, Grid, List} from "@mui/material";
 import styles from "./MessageDisplay.module.css";
-import {Grid} from "@mui/material";
 
 export default function MessageDisplay({messages}) {
   return (
-    <Grid container className={styles.smartphoneConversation}>
+    <Grid container className={styles.list}>
       {messages.map((message, index) => {
         return (
-          <Grid key={index} item xs={12} className={styles.messageItem}>
+          <Grid key={index} item xs={12} className={styles.message}>
             <TextPost index={index} message={message.messageBody} />
           </Grid>
         );

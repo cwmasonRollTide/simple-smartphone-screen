@@ -1,11 +1,13 @@
-.smartphone-bubble {
-  color: white;
+.bubble {
+  z-index: 10;
+  color: #FFFFFF;
   padding: 0.5em;
   min-width: 80%;
-  height: 100px;
+  text-align: right;
+  margin-right: 10px;
   font-size: large;
+  width: fit-content;
   border-radius: 0.5em;
-  background-color: blue;
+  background-color: dodgerblue;
   font-family: Microsoft Sans Serif, sans-serif;
-  z-index: 1;
 }

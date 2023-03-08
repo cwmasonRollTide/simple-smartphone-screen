@@ -1,23 +1,9 @@
 .smartphone {
-  height: 39em;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
   border-radius: 0.5em;
+  align-items: flex-end;
   flex-direction: column;
   background-color: black;
-}
-
-.smartphone-container {
-  align-content: flex-end;
-}
-
-.main-image-container {
-  border-radius: 3em;
-  align-items: center;
-  align-content: center;
-}
-
-.main-image {
-
+  height: calc(100vh - 20px);
 }

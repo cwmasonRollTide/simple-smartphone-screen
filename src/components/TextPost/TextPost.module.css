@@ -1,11 +1,29 @@
-.smartphone-bubble {
-  color: white;
+.sent {
+  z-index: 10;
+  color: #FFFFFF;
   padding: 0.5em;
   min-width: 80%;
-  height: 100px;
+  text-align: right;
+  margin-left: 8em;
+  margin-top: 0.25em;
   font-size: large;
+  width: fit-content;
   border-radius: 0.5em;
-  background-color: blue;
+  background-color: dodgerblue;
   font-family: Microsoft Sans Serif, sans-serif;
-  z-index: 1;
+}
+
+.post {
+  z-index: 10;
+  color: #FFFFFF;
+  padding: 0.5em;
+  min-width: 80%;
+  text-align: right;
+  margin-left: 8em;
+  margin-top: 0.25em;
+  font-size: large;
+  width: fit-content;
+  border-radius: 0.5em;
+  background-color: dodgerblue;
+  font-family: Microsoft Sans Serif, sans-serif;
 }

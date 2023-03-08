@@ -1,13 +1,10 @@
-.smartphone-conversation {
-  display: flex;
-  padding: 10px;
-  height: 39rem;
-  flex-direction: column;
-  background-color: black;
+.list {
+  text-align: right;
+  align-items: flex-end;
+  align-content: flex-end;
 }
 
-.message-item {
-  z-index: 1;
-  min-height: 8em;
-  background-color: blue;
+.message {
+  text-align: right;
+  align-items: flex-end;
 }
