@@ -1,22 +1,25 @@
 "use strict";
 
+var __importDefault = void 0 && (void 0).__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = ImagePost;
-var _react = _interopRequireDefault(require("react"));
-var _ImagePostModule = _interopRequireDefault(require("./ImagePost.module.css"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-function ImagePost(_ref) {
-  var index = _ref.index,
-    messageBody = _ref.messageBody,
-    mediaUrl = _ref.mediaUrl;
-  return /*#__PURE__*/_react.default.createElement("div", {
+var react_1 = __importDefault(require("react"));
+var ImagePost_module_css_1 = __importDefault(require("./ImagePost.module.css"));
+var ImagePost = function ImagePost(_a) {
+  var index = _a.index,
+    messageBody = _a.messageBody,
+    mediaUrl = _a.mediaUrl;
+  return react_1.default.createElement("div", {
     key: index,
-    className: _ImagePostModule.default.smartphoneBubbleOnImagePost
-  }, /*#__PURE__*/_react.default.createElement("img", {
+    className: ImagePost_module_css_1.default.smartphoneBubbleOnImagePost
+  }, react_1.default.createElement("img", {
     src: mediaUrl,
-    className: _ImagePostModule.default.messageImageOnImagePost,
+    className: ImagePost_module_css_1.default.messageImageOnImagePost,
     alt: '/logo512.png'
   }), messageBody);
-}
+};

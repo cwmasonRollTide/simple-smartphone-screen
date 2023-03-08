@@ -1,20 +1,24 @@
 "use strict";
 
+var __importDefault = void 0 && (void 0).__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = TextPost;
-var _react = _interopRequireDefault(require("react"));
-var _TextPostModule = _interopRequireDefault(require("./TextPost.module.css"));
-var _material = require("@mui/material");
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-function TextPost(_ref) {
-  var index = _ref.index,
-    message = _ref.message;
-  return /*#__PURE__*/_react.default.createElement(_material.Box, {
+var react_1 = __importDefault(require("react"));
+var TextPost_module_css_1 = __importDefault(require("./TextPost.module.css"));
+var material_1 = require("@mui/material");
+var TextPost = function TextPost(_a) {
+  var index = _a.index,
+    message = _a.message;
+  return react_1.default.createElement(material_1.Box, {
     key: index,
-    className: _TextPostModule.default.bubble
-  }, /*#__PURE__*/_react.default.createElement(_material.Typography, {
+    className: TextPost_module_css_1.default.sent
+  }, react_1.default.createElement(material_1.Typography, {
     variant: "h4"
   }, message));
-}
+};
+exports.default = TextPost;

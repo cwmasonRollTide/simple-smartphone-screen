@@ -1,38 +1,34 @@
 "use strict";
 
+var __importDefault = void 0 && (void 0).__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = SimpleSmartphoneComponent;
-var _react = _interopRequireDefault(require("react"));
-var _propTypes = _interopRequireDefault(require("prop-types"));
-var _material = require("@mui/material");
-var _MessageDisplay = _interopRequireDefault(require("./MessageDisplay"));
-var _SimpleSmartphoneComponentModule = _interopRequireDefault(require("./SimpleSmartphoneComponent.module.css"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-function SimpleSmartphoneComponent(_ref) {
-  var messages = _ref.messages,
-    mainImageUrl = _ref.mainImageUrl;
-  return /*#__PURE__*/_react.default.createElement(_material.Container, {
-    className: _SimpleSmartphoneComponentModule.default.smartphone
-  }, /*#__PURE__*/_react.default.createElement(_material.Grid, {
+var react_1 = __importDefault(require("react"));
+var material_1 = require("@mui/material");
+var MessageDisplay_1 = __importDefault(require("./MessageDisplay"));
+var SimpleSmartphoneComponent_module_css_1 = __importDefault(require("./SimpleSmartphoneComponent.module.css"));
+var SimpleSmartphoneComponent = function SimpleSmartphoneComponent(_a) {
+  var messages = _a.messages,
+    mainImageUrl = _a.mainImageUrl;
+  return react_1.default.createElement(material_1.Container, {
+    className: SimpleSmartphoneComponent_module_css_1.default.smartphone
+  }, react_1.default.createElement(material_1.Grid, {
     container: true
-  }, mainImageUrl && /*#__PURE__*/_react.default.createElement(_material.Grid, {
+  }, mainImageUrl && react_1.default.createElement(material_1.Grid, {
     item: true,
     xs: 12,
-    className: _SimpleSmartphoneComponentModule.default.message
-  }, /*#__PURE__*/_react.default.createElement(_material.Box, {
+    className: SimpleSmartphoneComponent_module_css_1.default.message
+  }, react_1.default.createElement(material_1.Box, {
     component: "img",
     src: mainImageUrl,
     alt: 'Person'
-  })), /*#__PURE__*/_react.default.createElement(_MessageDisplay.default, {
+  })), react_1.default.createElement(MessageDisplay_1.default, {
     messages: messages
   })));
-}
-SimpleSmartphoneComponent.propTypes = {
-  mainImageUrl: _propTypes.default.string,
-  messages: _propTypes.default.arrayOf(_propTypes.default.shape({
-    image: _propTypes.default.string,
-    messageBody: _propTypes.default.string
-  }))
 };
+exports.default = SimpleSmartphoneComponent;

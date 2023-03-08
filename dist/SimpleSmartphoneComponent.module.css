@@ -1,9 +1,10 @@
 .smartphone {
+  inset: 5em;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   border-radius: 0.5em;
-  align-items: flex-end;
-  flex-direction: column;
+  border-style: double;
   background-color: black;
-  height: calc(100vh - 20px);
+  height: calc(100vh - 10px);
 }

@@ -1,13 +1,18 @@
-.bubble {
+.sent {
+  text-align: right;
+  color: #FFFFFF;
+  margin-left: 6em;
+  background-color: dodgerblue;
+}
+
+.post {
   z-index: 10;
   color: #FFFFFF;
   padding: 0.5em;
   min-width: 80%;
-  text-align: right;
-  margin-right: 10px;
+  margin-top: 0.25em;
   font-size: large;
   width: fit-content;
   border-radius: 0.5em;
-  background-color: dodgerblue;
   font-family: Microsoft Sans Serif, sans-serif;
 }

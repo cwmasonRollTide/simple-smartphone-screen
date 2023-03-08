@@ -1,30 +1,33 @@
 "use strict";
 
+var __importDefault = void 0 && (void 0).__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = MessageDisplay;
-var _react = _interopRequireDefault(require("react"));
-var _TextPost = _interopRequireDefault(require("../TextPost"));
-var _material = require("@mui/material");
-var _MessageDisplayModule = _interopRequireDefault(require("./MessageDisplay.module.css"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var react_1 = __importDefault(require("react"));
+var TextPost_1 = __importDefault(require("../TextPost"));
 // import ImagePost from "../ImagePost";
-
-function MessageDisplay(_ref) {
-  var messages = _ref.messages;
-  return /*#__PURE__*/_react.default.createElement(_material.Grid, {
+var material_1 = require("@mui/material");
+var MessageDisplay_module_css_1 = __importDefault(require("./MessageDisplay.module.css"));
+var MessageDisplay = function MessageDisplay(_a) {
+  var messages = _a.messages;
+  return react_1.default.createElement(material_1.Grid, {
     container: true,
-    className: _MessageDisplayModule.default.list
+    className: MessageDisplay_module_css_1.default.list
   }, messages.map(function (message, index) {
-    return /*#__PURE__*/_react.default.createElement(_material.Grid, {
+    return react_1.default.createElement(material_1.Grid, {
       key: index,
       item: true,
       xs: 12,
-      className: _MessageDisplayModule.default.message
-    }, /*#__PURE__*/_react.default.createElement(_TextPost.default, {
+      className: MessageDisplay_module_css_1.default.message
+    }, react_1.default.createElement(TextPost_1.default, {
       index: index,
       message: message.messageBody
     }));
   }));
-}
+};
+exports.default = MessageDisplay;

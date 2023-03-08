@@ -1,10 +1,16 @@
 .list {
   text-align: right;
-  align-items: flex-end;
+  horiz-align: right;
   align-content: flex-end;
+  justify-items: flex-end;
+  justify-content: flex-end;
 }
 
 .message {
   text-align: right;
   align-items: flex-end;
+  align-content: flex-end;
+  justify-content: flex-end;
+  justify-items: flex-end;
+  float: right;
 }
