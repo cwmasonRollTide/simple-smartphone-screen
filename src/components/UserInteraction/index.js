@@ -27,6 +27,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var UserInteraction_module_css_1 = __importDefault(require("./UserInteraction.module.css"));
+var Send_1 = __importDefault(require("@mui/icons-material/Send"));
 var material_1 = require("@mui/material");
 var react_1 = __importStar(require("react"));
 var UserInteraction = function (_a) {
@@ -45,10 +46,11 @@ var UserInteraction = function (_a) {
             onTyping(typed);
         }
     };
-    return (react_1.default.createElement(material_1.Grid, { container: true, className: UserInteraction_module_css_1.default.messageContainer },
-        react_1.default.createElement(material_1.Grid, { item: true, xs: 8 },
-            react_1.default.createElement("input", { type: "text", value: typedContent, onChange: handleTyping, className: UserInteraction_module_css_1.default.messageInput })),
-        react_1.default.createElement(material_1.Grid, { item: true, xs: 4 },
-            react_1.default.createElement("button", { className: UserInteraction_module_css_1.default.button, onClick: handleSend }))));
+    return (react_1.default.createElement("div", { className: UserInteraction_module_css_1.default.container },
+        react_1.default.createElement(material_1.Box, { className: UserInteraction_module_css_1.default.text },
+            react_1.default.createElement(material_1.TextField, { type: "text", value: typedContent, onChange: handleTyping, className: UserInteraction_module_css_1.default.input })),
+        react_1.default.createElement(material_1.Box, { className: UserInteraction_module_css_1.default.button },
+            react_1.default.createElement(material_1.Button, { className: UserInteraction_module_css_1.default.button, onClick: handleSend },
+                react_1.default.createElement(Send_1.default, null)))));
 };
 exports.default = UserInteraction;

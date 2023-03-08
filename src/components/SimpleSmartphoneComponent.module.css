@@ -3,8 +3,8 @@
   display: flex;
   padding: 0.25em;
   flex-wrap: wrap;
-  overflow-y: hidden;
-  flex-direction: row;
+  overflow-y: scroll;
+  flex-direction: column;
   border-radius: 0.5em;
   border-style: double;
   background-color: black;
@@ -15,8 +15,8 @@
   height: 5em;
   display: flex;
   overflow: hidden;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .img {

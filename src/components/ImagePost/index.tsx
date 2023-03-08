@@ -1,5 +1,5 @@
 import styles from "./ImagePost.module.css";
-import {Box, Grid, Typography} from "@mui/material";
+import {Box, Card, CardContent, CardMedia, Grid, Typography} from "@mui/material";
 import Message from "../../interfaces/Message";
 import React, {FunctionComponent} from 'react';
 import TextPost from "../TextPost/index";
@@ -11,18 +11,18 @@ interface ImagePostProps {
 
 const ImagePost: FunctionComponent<ImagePostProps> = ({message, index}) => {
   return (
-    <Grid container key={index} className={styles.post}>
-      <Grid item xs={12} sx={{justifyItems: 'center', justifyContent: 'center', display: 'flex', float: 'center'}}>
+    <Card key={index} className={styles.post}>
+      <CardMedia sx={{justifyItems: 'flex-start', justifyContent: 'flex-start', display: 'flex', float: 'flex-start'}}>
         <img
           src={message.media}
           alt={'nothing'}
           className={styles.image}
         />
-      </Grid>
-      <Grid item xs={12}>
+      </CardMedia>
+      <CardContent>
         <TextPost index={index} message={message} />
-      </Grid>
-    </Grid>
+      </CardContent>
+    </Card>
   );
 }
 

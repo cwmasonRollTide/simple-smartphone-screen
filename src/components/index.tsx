@@ -12,7 +12,7 @@ const SimpleSmartphoneComponent: FunctionComponent<SmartphoneProps> = ({
   mainImageUrl
 }) => {
   return (
-    <Grid className={styles.smartphone}>
+    <Container className={styles.smartphone}>
       {mainImageUrl && (
         <Box justifyContent="center" className={styles.imgcontainer}>
           <img
@@ -25,14 +25,14 @@ const SimpleSmartphoneComponent: FunctionComponent<SmartphoneProps> = ({
       )}
       <MessageDisplay messages={messages} />
       {onSend &&
-        <Grid item xs={12} className={styles.user}>
+        <Box>
           <UserInteraction
             onSend={onSend}
             onTyping={onTyping ? onTyping : () => {}}
           />
-        </Grid>
+        </Box>
       }
-    </Grid>
+    </Container>
   );
 }
 

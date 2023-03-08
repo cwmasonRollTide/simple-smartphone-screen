@@ -4,17 +4,37 @@
   padding: 2em;
   background-color: lightgray;
 }
-.messageContainer {
+
+.text {
+  background-color: lightgrey;
+}
+
+.container {
+  margin-top: 3em;
   display: flex;
   align-items: center;
-  background-color: white;
   border-radius: 5em;
   padding: 1em;
   margin-top: 2em;
+  width: 100%;
 }
-.messageInput {
-  flex-grow: 1;
+
+.input {
   margin-left: 1em;
   margin-right: 1em;
-  background-color: darkgray;
+  border-radius: 0.5em;
+  width: calc(65vh - 5px);
+  background-color: lightgrey;
+}
+
+.button {
+  color: #000000;
+  border-radius: 0.5em;
+  background-color: white;
+  margin-left: 0.5em;
+}
+
+.button:hover {
+  color: #FFFFFF;
+  background-color: dodgerblue;
 }

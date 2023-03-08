@@ -1,6 +1,6 @@
 import TextPost from "../TextPost";
 import ImagePost from "../ImagePost";
-import {ListItem} from "@mui/material";
+import {List, ListItem} from "@mui/material";
 import React, {FunctionComponent} from "react";
 import Message from "../../interfaces/Message";
 import styles from "./MessageDisplay.module.css";
@@ -11,6 +11,11 @@ interface MessageDisplayProps {
 
 const MessageDisplay: FunctionComponent<MessageDisplayProps> = ({messages}) => {
   
+  /**
+   * TODO: Refactor to follow better design pattern once we have video example
+   * @param message
+   * @param index
+   */
   const postFactory = (message: Message, index: number) => {
     switch (message?.media) {
       case null:
@@ -22,7 +27,7 @@ const MessageDisplay: FunctionComponent<MessageDisplayProps> = ({messages}) => {
   }
   
   return (
-    <div className={styles.list}>
+    <List className={styles.list}>
       {messages.map((message, index) => {
         return (
           <ListItem key={index} className={!message.from ? styles.message : styles.message}>
@@ -30,7 +35,7 @@ const MessageDisplay: FunctionComponent<MessageDisplayProps> = ({messages}) => {
           </ListItem>
         );
       })}
-    </div>
+    </List>
   );
 }
 

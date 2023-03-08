@@ -1,5 +1,6 @@
 import styles from "./UserInteraction.module.css";
-import {Button, Container, Grid, TextField} from "@mui/material";
+import SendIcon from '@mui/icons-material/Send';
+import {Box, Button, Container, Grid, TextField} from "@mui/material";
 import React, {ChangeEvent, FunctionComponent, useState} from "react";
 
 interface UserInteractionProps {
@@ -28,15 +29,21 @@ const UserInteraction: FunctionComponent<UserInteractionProps> = ({
   };
   
   return (
-    <Container className={styles.messageContainer}>
-      <TextField
-        type="text"
-        value={typedContent}
-        onChange={handleTyping}
-        className={styles.messageInput}
-      />
-      <Button className={styles.button} onClick={handleSend}/>
-    </Container>
+    <div className={styles.container}>
+      <Box className={styles.text}>
+        <TextField
+          type="text"
+          value={typedContent}
+          onChange={handleTyping}
+          className={styles.input}
+        />
+      </Box>
+      <Box className={styles.button}>
+        <Button className={styles.button} onClick={handleSend}>
+          <SendIcon />
+        </Button>
+      </Box>
+    </div>
   );
 }
 
