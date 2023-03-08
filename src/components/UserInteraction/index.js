@@ -46,11 +46,17 @@ var UserInteraction = function (_a) {
             onTyping(typed);
         }
     };
-    return (react_1.default.createElement("div", { className: UserInteraction_module_css_1.default.container },
+    var handleKeyDown = function (event) {
+        if (event.key.toLowerCase() === "enter") {
+            event.preventDefault();
+            onSend(typedContent);
+            setTypedContent('');
+        }
+    };
+    return (react_1.default.createElement(material_1.Grid, { container: true, className: UserInteraction_module_css_1.default.container, onKeyDown: handleKeyDown },
         react_1.default.createElement(material_1.Box, { className: UserInteraction_module_css_1.default.text },
-            react_1.default.createElement(material_1.TextField, { type: "text", value: typedContent, onChange: handleTyping, className: UserInteraction_module_css_1.default.input })),
-        react_1.default.createElement(material_1.Box, { className: UserInteraction_module_css_1.default.button },
-            react_1.default.createElement(material_1.Button, { className: UserInteraction_module_css_1.default.button, onClick: handleSend },
-                react_1.default.createElement(Send_1.default, null)))));
+            react_1.default.createElement(material_1.TextField, { type: "text", variant: "outlined", value: typedContent, onChange: handleTyping, className: UserInteraction_module_css_1.default.input })),
+        react_1.default.createElement(material_1.Box, { className: UserInteraction_module_css_1.default.btnctn },
+            react_1.default.createElement(material_1.Button, { className: UserInteraction_module_css_1.default.button, onClick: handleSend, endIcon: react_1.default.createElement(Send_1.default, null) }))));
 };
 exports.default = UserInteraction;

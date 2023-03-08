@@ -16,25 +16,38 @@
   border-radius: 5em;
   padding: 1em;
   margin-top: 2em;
-  width: 100%;
+  font-size: large;
+  font-family: "Microsoft Sans Serif", sans-serif;
 }
 
 .input {
   margin-left: 1em;
   margin-right: 1em;
   border-radius: 0.5em;
-  width: calc(65vh - 5px);
+  width: calc(60vh - 2vh);
   background-color: lightgrey;
+}
+
+btnctn {
+  /*margin: 5em;*/
 }
 
 .button {
   color: #000000;
   border-radius: 0.5em;
   background-color: white;
-  margin-left: 0.5em;
+  justify-content: flex-end;
+  align-items: flex-end;
+  justify-items: flex-end;
+  display: flex;
+  font-size: 50px;
+  margin: 20px;
+  transform: scale(110%);
 }
 
 .button:hover {
   color: #FFFFFF;
-  background-color: dodgerblue;
+  color: #FFFFFF;
+  transform: scale(120%);
+  transition-duration: 300ms;
 }

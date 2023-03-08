@@ -3,12 +3,13 @@
   display: flex;
   padding: 0.25em;
   flex-wrap: wrap;
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
   flex-direction: column;
   border-radius: 0.5em;
   border-style: double;
   background-color: black;
-  height: calc(100vh - 10px);
+  height: calc(100vh - 5em);
 }
 
 .imgcontainer {

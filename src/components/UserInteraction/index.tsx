@@ -1,6 +1,6 @@
 import styles from "./UserInteraction.module.css";
 import SendIcon from '@mui/icons-material/Send';
-import {Box, Button, Container, Grid, TextField} from "@mui/material";
+import {Box, Button, Container, Grid, InputAdornment, TextField} from "@mui/material";
 import React, {ChangeEvent, FunctionComponent, useState} from "react";
 
 interface UserInteractionProps {
@@ -28,22 +28,29 @@ const UserInteraction: FunctionComponent<UserInteractionProps> = ({
     }
   };
   
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    if (event.key.toLowerCase() === "enter") {
+      event.preventDefault();
+      onSend(typedContent);
+      setTypedContent('');
+    }
+  };
+  
   return (
-    <div className={styles.container}>
+    <Grid container className={styles.container} onKeyDown={handleKeyDown}>
       <Box className={styles.text}>
         <TextField
           type="text"
+          variant="outlined"
           value={typedContent}
           onChange={handleTyping}
           className={styles.input}
         />
       </Box>
-      <Box className={styles.button}>
-        <Button className={styles.button} onClick={handleSend}>
-          <SendIcon />
-        </Button>
+      <Box className={styles.btnctn}>
+        <Button className={styles.button} onClick={handleSend} endIcon={<SendIcon />} />
       </Box>
-    </div>
+    </Grid>
   );
 }
 

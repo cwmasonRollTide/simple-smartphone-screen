@@ -1,6 +1,6 @@
 {
   "name": "simple-smartphone-screen",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "Simple lightweight ReactJS component to mimic a common smartphone screen for anyone :)",
   "main": "dist/index.js",
   "module": "dist/index.js",
