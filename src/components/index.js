@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var MessageDisplay_1 = __importDefault(require("./MessageDisplay"));
 var react_1 = __importDefault(require("react"));
 var material_1 = require("@mui/material");
-var UserInteraction_1 = __importDefault(require("components/UserInteraction"));
+var UserInteraction_1 = __importDefault(require("./UserInteraction"));
 var SimpleSmartphoneComponent_module_css_1 = __importDefault(require("./SimpleSmartphoneComponent.module.css"));
 var SimpleSmartphoneComponent = function (_a) {
     var onSend = _a.onSend, onTyping = _a.onTyping, messages = _a.messages, mainImageUrl = _a.mainImageUrl;

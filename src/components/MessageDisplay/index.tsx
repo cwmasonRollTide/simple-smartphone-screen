@@ -17,7 +17,7 @@ const MessageDisplay: FunctionComponent<Props> = ({messages}) => {
       case undefined:
         return <TextPost index={index} message={message} />;
       default:
-        return <ImagePost message={message}  index={index}/>;
+        return <ImagePost index={index} message={message} />;
     }
   }
   

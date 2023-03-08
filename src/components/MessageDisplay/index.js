@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var TextPost_1 = __importDefault(require("../TextPost"));
 var material_1 = require("@mui/material");
-var ImagePost_1 = __importDefault(require("components/ImagePost"));
+var ImagePost_1 = __importDefault(require("../ImagePost"));
 var react_1 = __importDefault(require("react"));
 var MessageDisplay_module_css_1 = __importDefault(require("./MessageDisplay.module.css"));
 var MessageDisplay = function (_a) {
