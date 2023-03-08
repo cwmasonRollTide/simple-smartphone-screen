@@ -2,9 +2,10 @@
   color: white;
   padding: 0.5em;
   min-width: 80%;
-  height: 10em;
+  height: 100px;
   font-size: large;
   border-radius: 0.5em;
-  background-color: dodgerblue;
+  background-color: blue;
   font-family: Microsoft Sans Serif, sans-serif;
+  z-index: 1;
 }

@@ -7,6 +7,9 @@ Plan is to make it have optional callbacks dropped in for user input - easy comp
 - npm run-script build
 - npm run start
 
+# DISCLAIMER
+This component is not ready to be used, but when it is, it will have functionality to funnel an active conversation through
+
 ### Goal is to be able to import SimpleSmartphoneComponent, pass in a function to handle user input, an
 ### image link for the circle on the center of the top of the smartphone chat, and messages from sender and
 ### receiver to be displayed - The following is an example of this component's use in ReactJS

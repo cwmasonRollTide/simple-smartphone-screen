@@ -6,14 +6,14 @@ import {Grid} from "@mui/material";
 
 export default function MessageDisplay({messages}) {
   return (
-    <div className={styles.smartphoneConversation}>
+    <Grid container className={styles.smartphoneConversation}>
       {messages.map((message, index) => {
         return (
-          <Grid item xs={12}>
+          <Grid key={index} item xs={12} className={styles.messageItem}>
             <TextPost index={index} message={message.messageBody} />
           </Grid>
         );
       })}
-    </div>
+    </Grid>
   );
 }

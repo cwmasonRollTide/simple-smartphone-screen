@@ -13,7 +13,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function MessageDisplay(_ref) {
   var messages = _ref.messages;
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement(_material.Grid, {
+    container: true,
     className: _MessageDisplayModule.default.smartphoneConversation
   }, messages.map(function (message, index) {
     return /*#__PURE__*/_react.default.createElement(_material.Grid, {

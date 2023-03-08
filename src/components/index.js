@@ -5,11 +5,6 @@ import MessageDisplay from "./MessageDisplay";
 import styles from "./SimpleSmartphoneComponent.module.css";
 
 export default function SimpleSmartphoneComponent({messages, mainImageUrl}) {
-  const exampleMessages = [{
-    messageBody: "This is a message body - it is required"
-  },{
-    messageBody: "This is a message without an image"
-  }];
   return (
     <Container className={styles.smartphone}>
       <Grid container className={styles.smartphoneContainer}>
@@ -18,7 +13,7 @@ export default function SimpleSmartphoneComponent({messages, mainImageUrl}) {
             <img src={mainImageUrl} className={styles.mainImage} alt={'/logo512.png'}/>
           </Grid>
         )}
-        <MessageDisplay messages={exampleMessages ?? messages} />
+        <MessageDisplay messages={messages} />
       </Grid>
     </Container>
   );
@@ -26,8 +21,8 @@ export default function SimpleSmartphoneComponent({messages, mainImageUrl}) {
 
 SimpleSmartphoneComponent.propTypes = {
   mainImageUrl: PropTypes.string,
-  messages: PropTypes.arrayOf({
+  messages: PropTypes.arrayOf(PropTypes.shape({
     image: PropTypes.string,
-    messageBody: PropTypes.string.isRequired
-  })
+    messageBody: PropTypes.string
+  }))
 };

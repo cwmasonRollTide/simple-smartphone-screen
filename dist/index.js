@@ -13,11 +13,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function SimpleSmartphoneComponent(_ref) {
   var messages = _ref.messages,
     mainImageUrl = _ref.mainImageUrl;
-  var exampleMessages = [{
-    messageBody: "This is a message body - it is required"
-  }, {
-    messageBody: "This is a message without an image"
-  }];
   return /*#__PURE__*/_react.default.createElement(_material.Container, {
     className: _SimpleSmartphoneComponentModule.default.smartphone
   }, /*#__PURE__*/_react.default.createElement(_material.Grid, {
@@ -32,7 +27,7 @@ function SimpleSmartphoneComponent(_ref) {
     className: _SimpleSmartphoneComponentModule.default.mainImage,
     alt: '/logo512.png'
   })), /*#__PURE__*/_react.default.createElement(_MessageDisplay.default, {
-    messages: exampleMessages !== null && exampleMessages !== void 0 ? exampleMessages : messages
+    messages: messages
   })));
 }
 SimpleSmartphoneComponent.propTypes = {
