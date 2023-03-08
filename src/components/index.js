@@ -11,12 +11,12 @@ var SimpleSmartphoneComponent_module_css_1 = __importDefault(require("./SimpleSm
 var SimpleSmartphoneComponent = function (_a) {
     var onSend = _a.onSend, onTyping = _a.onTyping, messages = _a.messages, mainImageUrl = _a.mainImageUrl;
     return (react_1.default.createElement(material_1.Container, { className: SimpleSmartphoneComponent_module_css_1.default.smartphone },
-        react_1.default.createElement(material_1.Grid, { container: true },
-            mainImageUrl && (react_1.default.createElement(material_1.Grid, { item: true, xs: 12, className: SimpleSmartphoneComponent_module_css_1.default.imgcontainer },
+        react_1.default.createElement(material_1.List, null,
+            mainImageUrl && (react_1.default.createElement(material_1.ListItem, { className: SimpleSmartphoneComponent_module_css_1.default.imgcontainer },
                 react_1.default.createElement(material_1.Box, { component: "img", className: SimpleSmartphoneComponent_module_css_1.default.img, src: mainImageUrl, alt: 'Person' }))),
             react_1.default.createElement(MessageDisplay_1.default, { messages: messages }),
             onSend &&
-                react_1.default.createElement(material_1.Grid, { item: true, xs: 12 },
+                react_1.default.createElement(material_1.ListItem, { className: SimpleSmartphoneComponent_module_css_1.default.user },
                     react_1.default.createElement(UserInteraction_1.default, { onSend: onSend, onTyping: onTyping ? onTyping : function () { } })))));
 };
 exports.default = SimpleSmartphoneComponent;

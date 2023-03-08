@@ -25,3 +25,7 @@
   object-fit: cover;
   border-radius: 5em;
 }
+
+.user {
+  background-color: #FFFFFF;
+}

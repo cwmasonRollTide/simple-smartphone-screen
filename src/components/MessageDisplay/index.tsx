@@ -1,18 +1,18 @@
 import TextPost from "../TextPost";
-import {Grid} from "@mui/material";
 import ImagePost from "../ImagePost";
+import {ListItem} from "@mui/material";
 import React, {FunctionComponent} from "react";
 import Message from "../../interfaces/Message";
 import styles from "./MessageDisplay.module.css";
 
-interface Props {
+interface MessageDisplayProps {
   messages: Message[]
 }
 
-const MessageDisplay: FunctionComponent<Props> = ({messages}) => {
+const MessageDisplay: FunctionComponent<MessageDisplayProps> = ({messages}) => {
   
   const postFactory = (message: Message, index: number) => {
-    switch (message.media) {
+    switch (message?.media) {
       case null:
       case undefined:
         return <TextPost index={index} message={message} />;
@@ -22,15 +22,15 @@ const MessageDisplay: FunctionComponent<Props> = ({messages}) => {
   }
   
   return (
-    <Grid container className={styles.list}>
+    <div className={styles.list}>
       {messages.map((message, index) => {
         return (
-          <Grid key={index} item xs={12} className={!message.from ? styles.message : styles.message}>
+          <ListItem key={index} className={!message.from ? styles.message : styles.message}>
             {postFactory(message, index)}
-          </Grid>
+          </ListItem>
         );
       })}
-    </Grid>
+    </div>
   );
 }
 

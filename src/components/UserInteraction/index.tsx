@@ -31,18 +31,15 @@ const UserInteraction: FunctionComponent<UserInteractionProps> = ({
     <div className={styles.root}>
       <div className={styles.messageContainer}>
         <Grid item xs={8}>
-          <TextField
-            variant="standard"
+          <input
+            type="text"
             value={typedContent}
             onChange={handleTyping}
             className={styles.messageInput}
-            InputProps={{
-              disableUnderline: true
-            }}
           />
         </Grid>
         <Grid item xs={4}>
-          <Button className={styles.button} onClick={handleSend}/>
+          <button className={styles.button} onClick={handleSend}/>
         </Grid>
       </div>
     </div>

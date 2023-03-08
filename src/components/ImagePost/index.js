@@ -6,10 +6,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var ImagePost_module_css_1 = __importDefault(require("./ImagePost.module.css"));
 var material_1 = require("@mui/material");
 var react_1 = __importDefault(require("react"));
+var index_1 = __importDefault(require("../TextPost/index"));
 var ImagePost = function (_a) {
     var message = _a.message, index = _a.index;
-    return (react_1.default.createElement(material_1.Box, { key: index, className: ImagePost_module_css_1.default.smartphoneBubbleOnImagePost },
-        react_1.default.createElement("img", { src: message.media, alt: 'nothing', className: ImagePost_module_css_1.default.messageImageOnImagePost }),
-        react_1.default.createElement(material_1.Typography, { variant: "h4" }, message.messageBody)));
+    return (react_1.default.createElement(material_1.Grid, { container: true, key: index, className: ImagePost_module_css_1.default.post },
+        react_1.default.createElement(material_1.Grid, { item: true, xs: 12, sx: { justifyItems: 'center', justifyContent: 'center', display: 'flex', float: 'center' } },
+            react_1.default.createElement("img", { src: message.media, alt: 'nothing', className: ImagePost_module_css_1.default.image })),
+        react_1.default.createElement(material_1.Grid, { item: true, xs: 12 },
+            react_1.default.createElement(index_1.default, { index: index, message: message }))));
 };
 exports.default = ImagePost;
