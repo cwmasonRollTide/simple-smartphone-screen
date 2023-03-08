@@ -1,19 +1,8 @@
 "use strict";
-var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
-    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
-        if (ar || !(i in from)) {
-            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-        }
-    }
-    return to.concat(ar || Array.prototype.slice.call(from));
-};
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-var react_1 = __importDefault(require("react"));
-var components_1 = __importDefault(require("../components"));
+var tslib_1 = require("tslib");
+var react_1 = tslib_1.__importDefault(require("react"));
+var components_1 = tslib_1.__importDefault(require("../components"));
 var styles_1 = require("@mui/material/styles");
 function Example() {
     var exampleMessages = [{
@@ -27,7 +16,7 @@ function Example() {
     var colorMode = react_1.default.useContext(ColorModeContext);
     var _a = react_1.default.useState(exampleMessages), statefulMessages = _a[0], setStatefulMessages = _a[1];
     var handleSendMessage = function (value) {
-        setStatefulMessages(function (prev) { return __spreadArray(__spreadArray([], prev, true), [{ messageBody: value }], false); });
+        setStatefulMessages(function (prev) { return tslib_1.__spreadArray(tslib_1.__spreadArray([], prev, true), [{ messageBody: value }], false); });
     };
     return (react_1.default.createElement(ColorModeContext.Provider, { value: colorMode },
         react_1.default.createElement(styles_1.ThemeProvider, { theme: theme },

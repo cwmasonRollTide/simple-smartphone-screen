@@ -1,13 +1,11 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-var TextPost_1 = __importDefault(require("../TextPost"));
-var ImagePost_1 = __importDefault(require("../ImagePost"));
+var tslib_1 = require("tslib");
+var TextPost_1 = tslib_1.__importDefault(require("../TextPost"));
+var ImagePost_1 = tslib_1.__importDefault(require("../ImagePost"));
 var material_1 = require("@mui/material");
-var react_1 = __importDefault(require("react"));
-var MessageDisplay_module_css_1 = __importDefault(require("./MessageDisplay.module.css"));
+var react_1 = tslib_1.__importDefault(require("react"));
+var MessageDisplay_module_css_1 = tslib_1.__importDefault(require("./MessageDisplay.module.css"));
 var MessageDisplay = function (_a) {
     var messages = _a.messages;
     /**

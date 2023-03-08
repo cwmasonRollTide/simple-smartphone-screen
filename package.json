@@ -1,6 +1,6 @@
 {
   "name": "simple-smartphone-screen",
-  "version": "0.3.7",
+  "version": "0.4.0",
   "description": "Simple lightweight ReactJS component to mimic a common smartphone screen for anyone :)",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -28,7 +28,8 @@
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "tslib": "^2.5.0"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,12 +1,10 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-var ImagePost_module_css_1 = __importDefault(require("./ImagePost.module.css"));
+var tslib_1 = require("tslib");
+var ImagePost_module_css_1 = tslib_1.__importDefault(require("./ImagePost.module.css"));
 var material_1 = require("@mui/material");
-var react_1 = __importDefault(require("react"));
-var index_1 = __importDefault(require("../TextPost/index"));
+var react_1 = tslib_1.__importDefault(require("react"));
+var index_1 = tslib_1.__importDefault(require("../TextPost/index"));
 var ImagePost = function (_a) {
     var message = _a.message, index = _a.index;
     return (react_1.default.createElement(material_1.Card, { key: index, className: ImagePost_module_css_1.default.post },
