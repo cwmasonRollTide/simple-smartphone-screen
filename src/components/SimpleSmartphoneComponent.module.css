@@ -1,8 +1,9 @@
 .smartphone {
   inset: 8em;
-  padding: 0.25em;
   display: flex;
+  padding: 0.25em;
   flex-wrap: wrap;
+  overflow-y: hidden;
   flex-direction: row;
   border-radius: 0.5em;
   border-style: double;
@@ -12,16 +13,15 @@
 
 .imgcontainer {
   height: 5em;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
   display: flex;
   overflow: hidden;
+  align-items: center;
+  justify-content: center;
 }
 
 .img {
-  max-width: 5em;
   height: 5em;
+  max-width: 5em;
   object-fit: cover;
   border-radius: 5em;
 }

@@ -45,13 +45,10 @@ var UserInteraction = function (_a) {
             onTyping(typed);
         }
     };
-    return (react_1.default.createElement("div", { className: UserInteraction_module_css_1.default.root },
-        react_1.default.createElement("div", { className: UserInteraction_module_css_1.default.messageContainer },
-            react_1.default.createElement(material_1.Grid, { item: true, xs: 8 },
-                react_1.default.createElement(material_1.TextField, { variant: "standard", value: typedContent, onChange: handleTyping, className: UserInteraction_module_css_1.default.messageInput, InputProps: {
-                        disableUnderline: true
-                    } })),
-            react_1.default.createElement(material_1.Grid, { item: true, xs: 4 },
-                react_1.default.createElement(material_1.Button, { className: UserInteraction_module_css_1.default.button, onClick: handleSend })))));
+    return (react_1.default.createElement(material_1.Grid, { container: true, className: UserInteraction_module_css_1.default.messageContainer },
+        react_1.default.createElement(material_1.Grid, { item: true, xs: 8 },
+            react_1.default.createElement("input", { type: "text", value: typedContent, onChange: handleTyping, className: UserInteraction_module_css_1.default.messageInput })),
+        react_1.default.createElement(material_1.Grid, { item: true, xs: 4 },
+            react_1.default.createElement("button", { className: UserInteraction_module_css_1.default.button, onClick: handleSend }))));
 };
 exports.default = UserInteraction;

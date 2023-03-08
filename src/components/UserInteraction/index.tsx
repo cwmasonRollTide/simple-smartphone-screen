@@ -28,21 +28,15 @@ const UserInteraction: FunctionComponent<UserInteractionProps> = ({
   };
   
   return (
-    <div className={styles.root}>
-      <div className={styles.messageContainer}>
-        <Grid item xs={8}>
-          <input
-            type="text"
-            value={typedContent}
-            onChange={handleTyping}
-            className={styles.messageInput}
-          />
-        </Grid>
-        <Grid item xs={4}>
-          <button className={styles.button} onClick={handleSend}/>
-        </Grid>
-      </div>
-    </div>
+    <Container className={styles.messageContainer}>
+      <TextField
+        type="text"
+        value={typedContent}
+        onChange={handleTyping}
+        className={styles.messageInput}
+      />
+      <Button className={styles.button} onClick={handleSend}/>
+    </Container>
   );
 }
 
