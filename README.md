@@ -59,6 +59,7 @@ export default interface Message {
   
   /**
    * If true, it will show who sent the message. Otherwise, just denote by color difference and orientation. Optional
+   * NOT YET WORKING
    */
   shouldShowFromSignature?: boolean;
   
