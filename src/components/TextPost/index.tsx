@@ -1,8 +1,8 @@
 import clsx from "clsx";
-import Message from "interfaces/Message";
+import Message from "../../interfaces/Message";
 import styles from "./TextPost.module.css";
+import {Box, Typography} from "@mui/material";
 import React, {FunctionComponent} from "react";
-import {Box, Grid, ListItem, Typography} from "@mui/material";
 
 interface Props {
   index: number;

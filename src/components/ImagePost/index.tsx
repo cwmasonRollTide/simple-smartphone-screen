@@ -1,17 +1,24 @@
-import React, {FunctionComponent} from 'react';
 import styles from "./ImagePost.module.css";
+import {Box, Typography} from "@mui/material";
+import Message from "../../interfaces/Message";
+import React, {FunctionComponent} from 'react';
 
-interface Props {
+interface ImagePostProps {
   index: number;
-  mediaUrl: string;
-  messageBody: string;
+  message: Message;
 }
 
-const ImagePost: FunctionComponent<Props> = ({index, messageBody, mediaUrl}) => {
+const ImagePost: FunctionComponent<ImagePostProps> = ({message, index}) => {
   return (
-    <div key={index} className={styles.smartphoneBubbleOnImagePost}>
-      <img src={mediaUrl} className={styles.messageImageOnImagePost} alt={'/logo512.png'}/>
-      {messageBody}
-    </div>
+    <Box key={index} className={styles.smartphoneBubbleOnImagePost}>
+      <img
+        src={message.media}
+        alt={'nothing'}
+        className={styles.messageImageOnImagePost}
+      />
+      <Typography variant="h4">{message.messageBody}</Typography>
+    </Box>
   );
 }
+
+export default ImagePost;
