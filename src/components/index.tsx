@@ -1,7 +1,7 @@
 import MessageDisplay from "./MessageDisplay";
-import React, {FunctionComponent} from 'react';
 import UserInteraction from "./UserInteraction";
 import styles from "./SimpleSmartphoneComponent.module.css";
+import React, {FunctionComponent, useEffect, useRef} from 'react';
 import {Container, Box, List, ListItem, Grid} from "@mui/material";
 import SmartphoneProps from "interfaces/SimpleSmartphoneComponentProps";
 
@@ -11,6 +11,13 @@ const SimpleSmartphoneComponent: FunctionComponent<SmartphoneProps> = ({
   messages,
   mainImageUrl
 }) => {
+  const listRef = useRef<HTMLUListElement>(null);
+
+  useEffect(() => {
+    const list = listRef.current;
+    list.scrollTop = list.scrollHeight;
+  }, [listRef.current?.scrollHeight]);
+
   return (
     <Container className={styles.smartphone}>
       {mainImageUrl && (
@@ -23,9 +30,9 @@ const SimpleSmartphoneComponent: FunctionComponent<SmartphoneProps> = ({
           />
         </Box>
       )}
-      <MessageDisplay messages={messages} />
+      <MessageDisplay messages={messages}/>
       {onSend &&
-        <Box>
+        <Box ref={listRef}>
           <UserInteraction
             onSend={onSend}
             onTyping={onTyping ? onTyping : () => {}}

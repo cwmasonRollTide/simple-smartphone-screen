@@ -10,13 +10,12 @@
 }
 
 .container {
-  margin-top: 3em;
-  display: flex;
-  align-items: center;
-  border-radius: 5em;
   padding: 1em;
-  margin-top: 2em;
+  display: flex;
   font-size: large;
+  margin-top: auto;
+  border-radius: 5em;
+  align-items: center;
   font-family: "Microsoft Sans Serif", sans-serif;
 }
 
@@ -24,7 +23,7 @@
   margin-left: 1em;
   margin-right: 1em;
   border-radius: 0.5em;
-  width: calc(60vh - 2vh);
+  width: calc(160vh - 5px);
   background-color: lightgrey;
 }
 

@@ -1,4 +1,6 @@
 .list {
+  flex: 1;
+  overflow-y: auto;
   text-align: right;
   horiz-align: right;
   align-content: flex-end;
