@@ -17,9 +17,9 @@ var SimpleSmartphoneComponent = function (_a) {
     return (react_1.default.createElement(material_1.Container, { className: SimpleSmartphoneComponent_module_css_1.default.smartphone },
         mainImageUrl && (react_1.default.createElement(material_1.Box, { justifyContent: "center", className: SimpleSmartphoneComponent_module_css_1.default.imgcontainer },
             react_1.default.createElement("img", { alt: 'Person', src: mainImageUrl, className: SimpleSmartphoneComponent_module_css_1.default.img, style: { justifySelf: "center" } }))),
-        react_1.default.createElement(MessageDisplay_1.default, { messages: messages, ref: listRef }),
+        react_1.default.createElement(MessageDisplay_1.default, { messages: messages }),
         onSend &&
-            react_1.default.createElement(material_1.Box, null,
+            react_1.default.createElement(material_1.Box, { ref: listRef },
                 react_1.default.createElement(UserInteraction_1.default, { onSend: onSend, onTyping: onTyping ? onTyping : function () { } }))));
 };
 exports.default = SimpleSmartphoneComponent;
