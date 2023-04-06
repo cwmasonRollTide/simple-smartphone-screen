@@ -4,6 +4,7 @@ import styles from "./SimpleSmartphoneComponent.module.css";
 import React, {FunctionComponent, useEffect, useRef} from 'react';
 import {Container, Box, List, ListItem, Grid} from "@mui/material";
 import SmartphoneProps from "interfaces/SimpleSmartphoneComponentProps";
+import * as constants from "constants";
 
 const SimpleSmartphoneComponent: FunctionComponent<SmartphoneProps> = ({
   onSend,
@@ -15,7 +16,7 @@ const SimpleSmartphoneComponent: FunctionComponent<SmartphoneProps> = ({
   
   const scrollToBottom = () => {
     if (listRef.current) {
-      listRef.current.scrollIntoView({ behavior: 'smooth' });
+      listRef.current.scrollIntoView({ behavior: 'auto' });
     }
   };
 
@@ -44,7 +45,7 @@ const SimpleSmartphoneComponent: FunctionComponent<SmartphoneProps> = ({
           />
         </Box>
       }
-      <Box ref={listRef} />
+      <Box ref={listRef}></Box>
     </Container>
   );
 }
