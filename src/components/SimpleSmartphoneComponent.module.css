@@ -9,7 +9,7 @@
   border-radius: 0.5em;
   border-style: double;
   background-color: black;
-  min-height: calc(100vh - 5px);
+  height: calc(100vh - 25px);
 }
 
 .imgcontainer {
