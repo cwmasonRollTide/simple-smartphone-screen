@@ -12,11 +12,16 @@ const SimpleSmartphoneComponent: FunctionComponent<SmartphoneProps> = ({
   mainImageUrl
 }) => {
   const listRef = useRef<HTMLUListElement>(null);
+  
+  const scrollToBottom = () => {
+    if (listRef.current) {
+      listRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   useEffect(() => {
-    const list = listRef.current;
-    list.scrollTop = list.scrollHeight;
-  }, [listRef.current?.scrollHeight]);
+    scrollToBottom();
+  }, [messages]);
 
   return (
     <Container className={styles.smartphone}>
@@ -32,13 +37,14 @@ const SimpleSmartphoneComponent: FunctionComponent<SmartphoneProps> = ({
       )}
       <MessageDisplay messages={messages}/>
       {onSend &&
-        <Box ref={listRef}>
+        <Box>
           <UserInteraction
             onSend={onSend}
             onTyping={onTyping ? onTyping : () => {}}
           />
         </Box>
       }
+      <Box ref={listRef} />
     </Container>
   );
 }
