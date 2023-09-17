@@ -7,24 +7,23 @@
 
 .text {
   background-color: lightgrey;
+  width: 90%;
 }
 
 .container {
-  padding: 1em;
   display: flex;
-  font-size: large;
+  font-size: medium;
   margin-top: auto;
-  border-radius: 5em;
+  padding: 2%;
+  border-radius: 10em;
   align-items: center;
   font-family: "Microsoft Sans Serif", sans-serif;
 }
 
 .input {
-  margin-left: 1em;
-  margin-right: 1em;
-  border-radius: 0.5em;
-  width: calc(160vh - 5px);
+  border-radius: 10em;
   background-color: lightgrey;
+  width: 100%;
 }
 
 btnctn {
@@ -40,12 +39,10 @@ btnctn {
   justify-items: flex-end;
   display: flex;
   font-size: 50px;
-  margin: 20px;
   transform: scale(110%);
 }
 
 .button:hover {
-  color: #FFFFFF;
   color: #FFFFFF;
   transform: scale(120%);
   transition-duration: 300ms;

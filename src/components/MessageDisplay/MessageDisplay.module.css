@@ -1,5 +1,6 @@
 .list {
   flex: 1;
+  margin-top: 5em;
   overflow-y: auto;
   text-align: right;
   horiz-align: right;

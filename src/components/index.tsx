@@ -2,7 +2,7 @@ import MessageDisplay from "./MessageDisplay";
 import UserInteraction from "./UserInteraction";
 import styles from "./SimpleSmartphoneComponent.module.css";
 import React, {FunctionComponent, useEffect, useRef} from 'react';
-import {Container, Box, List, ListItem, Grid} from "@mui/material";
+import {Container, Box, List, ListItem, Grid, CardHeader, CardMedia, Card} from "@mui/material";
 import SmartphoneProps from "interfaces/SimpleSmartphoneComponentProps";
 import * as constants from "constants";
 
@@ -24,17 +24,22 @@ const SimpleSmartphoneComponent: FunctionComponent<SmartphoneProps> = ({
     scrollToBottom();
   }, [messages]);
 
+  
   return (
     <Container className={styles.smartphone}>
       {mainImageUrl && (
-        <Box justifyContent="center" className={styles.imgcontainer}>
-          <img
-            alt={'Person'}
-            src={mainImageUrl}
-            className={styles.img}
-            style={{justifySelf: "center"}}
-          />
-        </Box>
+        <CardHeader
+          className={styles.imgcontainer}
+          style={{display: 'flex', justifyContent: 'center'}}
+          avatar={
+            <Box className={styles.imgbox}>
+              <img
+                src={mainImageUrl}
+                className={styles.img}
+              />
+            </Box>
+          }
+        />
       )}
       <MessageDisplay messages={messages}/>
       {onSend &&

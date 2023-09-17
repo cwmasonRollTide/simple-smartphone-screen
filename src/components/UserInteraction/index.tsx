@@ -46,9 +46,9 @@ const UserInteraction: FunctionComponent<UserInteractionProps> = ({
           onChange={handleTyping}
           className={styles.input}
         />
-      </Box>
-      <Box className={styles.btnctn}>
-        <Button className={styles.button} onClick={handleSend} endIcon={<SendIcon />} />
+        <Box className={styles.btnctn}>
+          <Button className={styles.button} onClick={handleSend} endIcon={<SendIcon />} />
+        </Box>
       </Box>
     </Grid>
   );
