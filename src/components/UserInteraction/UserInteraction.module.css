@@ -12,9 +12,11 @@
 
 .container {
   display: flex;
-  font-size: medium;
+  padding: 0.5em;
+  min-width: 80%;
+  padding-left: 3em;
+  font-size: 5px;
   margin-top: auto;
-  padding: 2%;
   border-radius: 10em;
   align-items: center;
   font-family: "Microsoft Sans Serif", sans-serif;

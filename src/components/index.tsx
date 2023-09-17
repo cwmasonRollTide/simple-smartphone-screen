@@ -30,7 +30,6 @@ const SimpleSmartphoneComponent: FunctionComponent<SmartphoneProps> = ({
       {mainImageUrl && (
         <CardHeader
           className={styles.imgcontainer}
-          style={{display: 'flex', justifyContent: 'center'}}
           avatar={
             <Box className={styles.imgbox}>
               <img

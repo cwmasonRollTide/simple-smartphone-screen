@@ -45,10 +45,12 @@ const UserInteraction: FunctionComponent<UserInteractionProps> = ({
           value={typedContent}
           onChange={handleTyping}
           className={styles.input}
+          InputProps={{endAdornment: (
+              <InputAdornment position="end">
+                <Button className={styles.button} onClick={handleSend} endIcon={<SendIcon />} />
+              </InputAdornment>
+            )}}
         />
-        <Box className={styles.btnctn}>
-          <Button className={styles.button} onClick={handleSend} endIcon={<SendIcon />} />
-        </Box>
       </Box>
     </Grid>
   );
