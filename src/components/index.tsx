@@ -40,7 +40,7 @@ const SimpleSmartphoneComponent: FunctionComponent<SmartphoneProps> = ({
           }
         />
       )}
-      <MessageDisplay messages={messages}/>
+        <MessageDisplay messages={messages}/>
       {onSend &&
         <Box>
           <UserInteraction
