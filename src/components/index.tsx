@@ -28,28 +28,23 @@ const SimpleSmartphoneComponent: FunctionComponent<SmartphoneProps> = ({
   return (
     <Container className={styles.smartphone}>
       {mainImageUrl && (
-        <CardHeader
-          className={styles.imgcontainer}
-          avatar={
-            <Box className={styles.imgbox}>
-              <img
-                src={mainImageUrl}
-                className={styles.img}
-              />
-            </Box>
-          }
-        />
+        <Box display="flex" bgcolor="black" justifyContent="center" alignItems="center" p={2} top={0} position="sticky" zIndex={100}>
+          <img
+            src={mainImageUrl}
+            className={styles.img}
+          />
+        </Box>
       )}
-        <MessageDisplay messages={messages}/>
+      <MessageDisplay messages={messages}/>
       {onSend &&
-        <Box>
+          <Box display="flex" bgcolor="black" justifyContent="center" alignItems="center" p={2} bottom={0} position="sticky" zIndex={100}>
           <UserInteraction
             onSend={onSend}
             onTyping={onTyping ? onTyping : () => {}}
           />
+          <Box ref={listRef}></Box>
         </Box>
       }
-      <Box ref={listRef}></Box>
     </Container>
   );
 }

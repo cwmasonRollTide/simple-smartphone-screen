@@ -30,8 +30,7 @@ var UserInteraction = function (_a) {
     };
     return (react_1.default.createElement(material_1.Grid, { container: true, className: UserInteraction_module_css_1.default.container, onKeyDown: handleKeyDown },
         react_1.default.createElement(material_1.Box, { className: UserInteraction_module_css_1.default.text },
-            react_1.default.createElement(material_1.TextField, { type: "text", variant: "outlined", value: typedContent, onChange: handleTyping, className: UserInteraction_module_css_1.default.input })),
-        react_1.default.createElement(material_1.Box, { className: UserInteraction_module_css_1.default.btnctn },
-            react_1.default.createElement(material_1.Button, { className: UserInteraction_module_css_1.default.button, onClick: handleSend, endIcon: react_1.default.createElement(Send_1.default, null) }))));
+            react_1.default.createElement(material_1.TextField, { type: "text", variant: "outlined", value: typedContent, onChange: handleTyping, className: UserInteraction_module_css_1.default.input, InputProps: { endAdornment: (react_1.default.createElement(material_1.InputAdornment, { position: "end" },
+                        react_1.default.createElement(material_1.Button, { className: UserInteraction_module_css_1.default.button, onClick: handleSend, endIcon: react_1.default.createElement(Send_1.default, null) }))) } }))));
 };
 exports.default = UserInteraction;
