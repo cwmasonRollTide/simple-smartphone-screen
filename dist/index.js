@@ -1,5 +1,4 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var SimpleSmartphoneComponent_1 = require("./SimpleSmartphoneComponent");
-exports.SimpleSmartphoneComponent = SimpleSmartphoneComponent_1.default;
-
+var tslib_1 = require("tslib");
+tslib_1.__exportStar(require("./components"), exports);

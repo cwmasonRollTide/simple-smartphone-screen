@@ -1,10 +1,9 @@
-import MessageDisplay from "./MessageDisplay";
-import UserInteraction from "./UserInteraction";
+import MessageDisplay from "../MessageDisplay";
+import UserInteraction from "../UserInteraction";
 import styles from "./SimpleSmartphoneComponent.module.css";
 import React, {FunctionComponent, useEffect, useRef} from 'react';
-import {Container, Box, List, ListItem, Grid, CardHeader, CardMedia, Card} from "@mui/material";
+import {Container, Box} from "@mui/material";
 import SmartphoneProps from "interfaces/SimpleSmartphoneComponentProps";
-import * as constants from "constants";
 
 const SimpleSmartphoneComponent: FunctionComponent<SmartphoneProps> = ({
   onSend,
@@ -32,6 +31,7 @@ const SimpleSmartphoneComponent: FunctionComponent<SmartphoneProps> = ({
           <img
             src={mainImageUrl}
             className={styles.img}
+            alt={null}
           />
         </Box>
       )}

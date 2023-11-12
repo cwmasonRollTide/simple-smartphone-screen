@@ -1,6 +1,6 @@
 import React from "react";
 import Message from "../interfaces/Message";
-import SimpleSmartphoneComponent from "../components";
+import SimpleSmartphoneComponent from "../components/SimpleSmartphoneComponent";
 import { useTheme, ThemeProvider } from '@mui/material/styles';
 
 export default function Example() {
