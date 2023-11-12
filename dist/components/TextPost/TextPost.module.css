@@ -1,0 +1,17 @@
+.sent {
+  text-align: right;
+  align-self: self-end;
+  color: #FFFFFF;
+  background-color: dodgerblue;
+}
+
+.post {
+  z-index: 10;
+  color: #FFFFFF;
+  padding: 1em;
+  margin-top: 0.25em;
+  font-size: medium;
+  width: fit-content;
+  border-radius: 0.5em;
+  font-family: Microsoft Sans Serif, sans-serif;
+}

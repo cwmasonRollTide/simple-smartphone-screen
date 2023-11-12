@@ -1,6 +1,6 @@
 {
   "name": "simple-smartphone-screen",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "description": "Simple lightweight ReactJS component to mimic a common smartphone screen for anyone :)",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -36,8 +36,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "npm install && npx tsc && npm run bundle-css",
-    "bundle-css": "node scripts/bundle-css.js",
+    "build": "npm install && npx tsc && npm run copy-css",
+    "copy-css": "node scripts/copy-css.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prep": "npm run build && npm start"

@@ -1,0 +1,19 @@
+.list {
+  flex: 1;
+  margin: 5em;
+  overflow-y: auto;
+  text-align: right;
+  horiz-align: right;
+  align-content: flex-end;
+  justify-items: flex-end;
+  justify-content: flex-end;
+}
+
+.message {
+  text-align: right;
+  align-items: flex-end;
+  align-content: flex-end;
+  justify-content: flex-end;
+  justify-items: flex-end;
+  float: right;
+}

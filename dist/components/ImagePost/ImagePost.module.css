@@ -1,0 +1,19 @@
+.image {
+  border-radius: 2em;
+  align-items: flex-start;
+  align-self: flex-start;
+  justify-items: flex-start;
+  justify-content: flex-start;
+  display: block;
+  padding: 1em
+}
+
+.post {
+  color: white;
+  padding: 0.5em;
+  min-width: 80%;
+  font-size: 5px;
+  border-radius:2em;
+  background-color: dodgerblue;
+  font-family: "Microsoft Sans Serif", sans-serif;
+}

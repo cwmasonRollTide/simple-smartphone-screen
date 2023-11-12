@@ -1,0 +1,53 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  background-color: lightgray;
+}
+
+.text {
+  background-color: lightgrey;
+  width: 95%;
+}
+
+.container {
+  display: flex;
+  padding: 0.5em;
+  min-width: 80%;
+  padding-left: 3em;
+  font-size: 5px;
+  margin-top: auto;
+  margin: 0.5em;
+  margin-bottom: 2em;
+  border-radius: 10em;
+  align-items: center;
+  font-family: "Microsoft Sans Serif", sans-serif;
+}
+
+.input {
+  border-radius: 10em;
+  background-color: lightgrey;
+  width: 100%;
+}
+
+btnctn {
+  /*margin: 5em;*/
+}
+
+.button {
+  color: #000000;
+  border-radius: 0.5em;
+  background-color: white;
+  justify-content: flex-end;
+  align-items: flex-end;
+  justify-items: flex-end;
+  display: flex;
+  font-size: 50px;
+  transform: scale(110%);
+}
+
+.button:hover {
+  color: #FFFFFF;
+  transform: scale(120%);
+  transition-duration: 300ms;
+}
