@@ -1,10 +1,10 @@
 {
   "name": "simple-smartphone-screen",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "Simple lightweight ReactJS component to mimic a common smartphone screen for anyone :)",
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "prepublishOnly": "tsc",
+  "prepublishOnly": "npm run build",
   "files": [
     "dist",
     "README.md"
@@ -19,25 +19,28 @@
     "email": "connorwmason25@gmail.com"
   },
   "license": "MIT",
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0",
+    "@emotion/react": ">=11.0.0",
+    "@emotion/styled": ">=11.0.0",
+    "@mui/material": ">=5.0.0",
+    "@mui/icons-material": ">=5.0.0"
+  },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
-    "@emotion/react": "^11.10.6",
-    "@emotion/styled": "^11.10.6",
-    "@mui/icons-material": "^5.11.11",
-    "@mui/material": "^5.11.12",
     "clsx": "^1.2.1",
     "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "tslib": "^2.5.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "npm install && npx tsc",
+    "build": "npm install && npx tsc && npm run bundle-css",
+    "bundle-css": "node scripts/bundle-css.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prep": "npm install && npx tsc && npm start"
+    "prep": "npm run build && npm start"
   },
   "eslintConfig": {
     "extends": [

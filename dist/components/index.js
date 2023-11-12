@@ -18,11 +18,11 @@ var SimpleSmartphoneComponent = function (_a) {
         scrollToBottom();
     }, [messages]);
     return (react_1.default.createElement(material_1.Container, { className: SimpleSmartphoneComponent_module_css_1.default.smartphone },
-        mainImageUrl && (react_1.default.createElement(material_1.Box, { display: "flex", justifyContent: "center", alignItems: "center", p: 2 },
+        mainImageUrl && (react_1.default.createElement(material_1.Box, { display: "flex", bgcolor: "black", justifyContent: "center", alignItems: "center", p: 2, top: 0, position: "sticky", zIndex: 100 },
             react_1.default.createElement("img", { src: mainImageUrl, className: SimpleSmartphoneComponent_module_css_1.default.img }))),
         react_1.default.createElement(MessageDisplay_1.default, { messages: messages }),
         onSend &&
-            react_1.default.createElement(material_1.Box, null,
+            react_1.default.createElement(material_1.Box, { display: "flex", bgcolor: "black", justifyContent: "center", alignItems: "center", p: 2, bottom: 0, position: "sticky", zIndex: 100 },
                 react_1.default.createElement(UserInteraction_1.default, { onSend: onSend, onTyping: onTyping ? onTyping : function () { } }),
                 react_1.default.createElement(material_1.Box, { ref: listRef }))));
 };
