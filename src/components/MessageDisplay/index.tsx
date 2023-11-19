@@ -32,7 +32,7 @@ const MessageDisplay: FunctionComponent<MessageDisplayProps> = ({messages}) => {
         return (
           <ListItem
             key={index}
-            className={!message.from ? styles.message : styles.message}
+            className={message.from ? styles.messageFrom : styles.messageTo}
           >
             {postFactory(message, index)}
           </ListItem>

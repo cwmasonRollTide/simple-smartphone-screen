@@ -11,7 +11,7 @@ interface Props {
 
 const TextPost: FunctionComponent<Props> = ({index, message}) => {
   return (
-    <Box key={index} className={clsx(styles.post, !message.from ? styles.sent : styles.received)}>
+    <Box key={index} className={clsx(styles.post, message.from ? styles.received : styles.sent)}>
       <Typography variant="h4">{message.messageBody}</Typography>
     </Box>
   );

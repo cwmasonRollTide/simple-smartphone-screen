@@ -1,19 +1,27 @@
 .list {
+  display: flex;
+  flex-direction: column;
   flex: 1;
+  min-height: 85%;
+  max-height: 85%;
   margin: 2.5em;
   overflow-y: auto;
-  text-align: right;
-  horiz-align: right;
-  align-content: flex-end;
-  justify-items: flex-end;
-  justify-content: flex-end;
 }
 
-.message {
-  text-align: right;
-  align-items: flex-end;
-  align-content: flex-end;
-  justify-content: flex-end;
-  justify-items: flex-end;
-  float: right;
+.list .messageTo,
+.list .messageFrom {
+  display: flex;
+  width: fit-content;
+  text-align: right; /* default text alignment */
+}
+
+.list .messageTo {
+  align-self: flex-end;
+  margin-left: auto; /* Push to the right */
+}
+
+.list .messageFrom {
+  align-self: flex-start;
+  margin-right: auto; /* Push to the left */
+  text-align: left; /* text alignment for received messages */
 }

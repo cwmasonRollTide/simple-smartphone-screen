@@ -12,7 +12,7 @@ interface ImagePostProps {
 const ImagePost: FunctionComponent<ImagePostProps> = ({message, index}) => {
   return (
     <Card key={index} className={styles.post}>
-      <CardMedia sx={{justifyItems: 'flex-start', justifyContent: 'flex-start', display: 'flex', float: 'flex-start'}}>
+      <CardMedia sx={{justifyItems: 'flex-end', justifyContent: 'flex-end', display: 'flex', float: 'flex-end'}}>
         <img
           src={message.media}
           alt={'nothing'}

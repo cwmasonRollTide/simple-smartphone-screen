@@ -23,7 +23,7 @@ var MessageDisplay = function (_a) {
         }
     };
     return (react_1.default.createElement(material_1.List, { className: MessageDisplay_module_css_1.default.list }, messages.map(function (message, index) {
-        return (react_1.default.createElement(material_1.ListItem, { key: index, className: !message.from ? MessageDisplay_module_css_1.default.message : MessageDisplay_module_css_1.default.message }, postFactory(message, index)));
+        return (react_1.default.createElement(material_1.ListItem, { key: index, className: message.from ? MessageDisplay_module_css_1.default.messageFrom : MessageDisplay_module_css_1.default.messageTo }, postFactory(message, index)));
     })));
 };
 exports.default = MessageDisplay;

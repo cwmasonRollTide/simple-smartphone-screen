@@ -5,6 +5,12 @@
   background-color: dodgerblue;
 }
 
+.received {
+  align-self: self-start;
+  text-align: left;
+  background-color: mediumseagreen;
+}
+
 .post {
   z-index: 10;
   color: #FFFFFF;
