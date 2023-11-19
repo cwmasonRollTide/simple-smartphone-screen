@@ -2,7 +2,7 @@ import MessageDisplay from "../MessageDisplay";
 import UserInteraction from "../UserInteraction";
 import styles from "./SimpleSmartphoneComponent.module.css";
 import React, {FunctionComponent, useEffect, useRef} from 'react';
-import {Container, Box} from "@mui/material";
+import {Container, Box, List} from "@mui/material";
 import SmartphoneProps from "interfaces/SimpleSmartphoneComponentProps";
 
 const SimpleSmartphoneComponent: FunctionComponent<SmartphoneProps> = ({
@@ -11,7 +11,7 @@ const SimpleSmartphoneComponent: FunctionComponent<SmartphoneProps> = ({
   messages,
   mainImageUrl
 }) => {
-  const listRef = useRef<HTMLUListElement>(null);
+  const listRef = useRef<HTMLDivElement>(null);
   
   const scrollToBottom = () => {
     if (listRef.current) {
@@ -36,13 +36,13 @@ const SimpleSmartphoneComponent: FunctionComponent<SmartphoneProps> = ({
         </Box>
       )}
       <MessageDisplay messages={messages}/>
+      <div ref={listRef} />
       {onSend &&
           <Box display="flex" bgcolor="black" justifyContent="center" alignItems="center" p={2} bottom={0} position="sticky" zIndex={100}>
-          <UserInteraction
-            onSend={onSend}
-            onTyping={onTyping ? onTyping : () => {}}
-          />
-          <Box ref={listRef}></Box>
+            <UserInteraction
+              onSend={onSend}
+              onTyping={onTyping ? onTyping : () => {}}
+            />
         </Box>
       }
     </Container>
