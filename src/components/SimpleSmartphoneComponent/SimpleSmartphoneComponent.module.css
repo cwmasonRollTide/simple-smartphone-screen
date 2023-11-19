@@ -8,7 +8,8 @@
   border-radius: 0.5em;
   border-style: double;
   background-color: black;
-  height: calc(100vh - 25px);
+  height: fit-content;
+  max-height: 70em;
 }
 
 .imgBackground {
@@ -25,8 +26,12 @@
   align-items: center;
   z-index: 20;
   border-radius: 1em;
-  align-items: center;
-  display: flex;
+}
+
+.messageContainer {
+  padding-top: 5em; /* Ensure enough space at the top */
+  overflow-y: auto; /* Allow scrolling within this container */
+  /*height: calc(100%);*/
 }
 
 .usrcontainer {

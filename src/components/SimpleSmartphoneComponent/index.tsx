@@ -35,14 +35,16 @@ const SimpleSmartphoneComponent: FunctionComponent<SmartphoneProps> = ({
           />
         </Box>
       )}
-      <MessageDisplay messages={messages}/>
-      <div ref={listRef} />
+      <Box className={styles.messageContainer}> 
+        <MessageDisplay messages={messages}/>
+      </Box>
       {onSend &&
-          <Box display="flex" bgcolor="black" justifyContent="center" alignItems="center" p={2} bottom={0} position="sticky" zIndex={100}>
-            <UserInteraction
-              onSend={onSend}
-              onTyping={onTyping ? onTyping : () => {}}
-            />
+        <Box display="flex" bgcolor="black" justifyContent="center" alignItems="center" p={2} bottom={0} position="sticky" zIndex={100}>
+          <UserInteraction
+            onSend={onSend}
+            onTyping={onTyping ? onTyping : () => {}}
+          />
+          <div ref={listRef} />
         </Box>
       }
     </Container>
